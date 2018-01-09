@@ -50,7 +50,7 @@ $header[] = "Content-Type: application/json";
 			$result_ary = mb_split("\n",$result -> responses[0] -> fullTextAnnotation -> text);
 			$ans_txt = "這張發票沒用了，你又製造了一張垃圾";
 			foreach ($result_ary as $val) {
-				if($val == "AG-26272435"){
+				if($val == "XN-07093129"){
 					$ans_txt = "恭喜您中獎啦，快分紅!!";
 				}
 			}
