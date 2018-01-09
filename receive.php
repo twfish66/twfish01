@@ -48,13 +48,13 @@ $header[] = "Content-Type: application/json";
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $header);                                                                                                   
 			$result = json_decode(curl_exec($ch));
-			/*$result_ary = mb_split("\n",$result -> responses[0] -> fullTextAnnotation -> text);
+			$result_ary = mb_split("\n",$result -> responses[0] -> fullTextAnnotation -> text);
 			$ans_txt = "這張發票沒用了，你又製造了一張垃圾";
 			foreach ($result_ary as $val) {
 				if($val == "AG-26272435"){
 					$ans_txt = "恭喜您中獎啦，快分紅!!";
 				}
-			}*/
+			}
 			$response = array (
 				"to" => $sender_userid,
 				"messages" => array (
